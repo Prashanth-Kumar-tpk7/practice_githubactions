@@ -8,5 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Python code
-        run: |
-          cd ../../ && python main.py
+        run: pwd
