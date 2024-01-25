@@ -1,11 +1,19 @@
-name: Super-Linter
+name: Run Main.py
 
 on: push
 
 jobs:
-  super-lint:
-    name: Lint code base
+  run-main:
+    name: Run main.py
     runs-on: ubuntu-latest
     steps:
-      - name: Run Python code
-        run: pwd && cd .. && ls -a
+      - name: Checkout code
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.8
+
+      - name: Run Python script
+        run: python main.py
