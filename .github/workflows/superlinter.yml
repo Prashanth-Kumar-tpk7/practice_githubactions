@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Python code
-        run: pwd
+        run: cd /home/runner/work/practice_githubactions/practice_githubactions && python main.py
